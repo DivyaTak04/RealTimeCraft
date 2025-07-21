@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Editor container height */
+.ql-container {
+  min-height: 300px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Smooth theme transitions */
+body {
+  @apply transition-colors duration-300;
+}
+
+
+/* Optional scrollbar theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 255, 0.5);
+  border-radius: 6px;
+}
+
+/* 🌙 Quill Editor Dark Mode Fix */
+.dark .ql-editor {
+  color: #f1f5f9 !important; /* Light text */
+  background-color: #1e293b !important; /* Match dark card */
+}
+
+.dark .ql-toolbar {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+.dark .ql-container {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+/* ✨ Make buttons/icons visible */
+.dark .ql-picker,
+.dark .ql-stroke,
+.dark .ql-fill {
+  color: #f1f5f9 !important;
+  stroke: #f1f5f9 !important;
+  fill: #f1f5f9 !important;
+}
+
+.dark .ql-picker-options {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+/* 🔵 Active tool highlight */
+.dark .ql-active,
+.dark .ql-selected {
+  color: #38bdf8 !important;
+  stroke: #38bdf8 !important;
+}
+
+/* 🧊 Optional hover glow */
+.dark .ql-toolbar button:hover {
+  filter: drop-shadow(0 0 4px #38bdf8);
+}
